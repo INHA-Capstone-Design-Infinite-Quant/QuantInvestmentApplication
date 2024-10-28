@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/chartFragment"
+        android:icon="@drawable/chart_no_select"
+        app:showAsAction="always"
+        android:title="차트"/>
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/account_no_select"
+        app:showAsAction="always"
+        android:title="계좌" />
+    <item
+        android:id="@+id/logFragment"
+        android:icon="@drawable/log_no_select"
+        app:showAsAction="always"
+        android:title="로그" />
+
+</menu>
