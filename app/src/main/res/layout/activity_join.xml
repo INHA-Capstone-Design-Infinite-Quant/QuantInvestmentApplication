@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.JoinActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="44dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="회원 가입"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/join_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDD3D9"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/login_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDD3D9"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/join_btn"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_underline">
+
+            <TextView
+                android:id="@+id/join_id_tv"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="left|center"
+                android:text="ID"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                app:counterMaxLength="100"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/join_id_til"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/gray3"
+                    android:theme="@style/EditTheme"
+                    android:visibility="visible"
+                    app:counterMaxLength="12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleTint="@color/gray3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/join_id_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/gray3"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        app:counterEnabled="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/join_pw_tv"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="left|center"
+                android:text="PW"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                app:counterMaxLength="100"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/join_pw_til"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/gray3"
+                    android:theme="@style/EditTheme"
+                    android:visibility="visible"
+                    app:counterMaxLength="12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/gray3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/join_pw_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/gray3"
+                        android:hint="12자 이내로 입력"
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        app:counterEnabled="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_underline">
+
+            <TextView
+                android:id="@+id/join_account_num_tv"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="left|center"
+                android:text="계좌 번호"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                app:counterMaxLength="100"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/join_account_num_til"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/gray3"
+                    android:theme="@style/EditTheme"
+                    android:visibility="visible"
+                    app:counterMaxLength="12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleTint="@color/gray3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/join_account_num_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/gray3"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        app:counterEnabled="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                android:id="@+id/join_appkey_tv"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="left|center"
+                android:text="App Key"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/join_appkey_til"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/gray3"
+                    android:theme="@style/EditTheme"
+                    app:counterMaxLength="100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/gray3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/join_appkey_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/gray3"
+                        android:inputType="textPassword"
+                        android:maxLength="100"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        app:counterEnabled="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <TextView
+                android:id="@+id/join_app_secret_tv"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="left|center"
+                android:text="App Secret"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/join_app_secret_til"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/gray3"
+                    android:theme="@style/EditTheme"
+                    android:visibility="visible"
+                    app:counterMaxLength="250"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/gray3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/join_app_secret_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/gray3"
+                        android:inputType="textPassword"
+                        android:maxLength="250"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        app:counterEnabled="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/join_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/shape_selected_btn_radius8"
+        android:text="회원 가입"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

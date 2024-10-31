@@ -18,5 +18,9 @@
         android:icon="@drawable/log_no_select"
         app:showAsAction="always"
         android:title="로그" />
-
+    <item
+        android:id="@+id/mypageFragment"
+        android:icon="@drawable/mypage"
+        app:showAsAction="always"
+        android:title="My" />
 </menu>

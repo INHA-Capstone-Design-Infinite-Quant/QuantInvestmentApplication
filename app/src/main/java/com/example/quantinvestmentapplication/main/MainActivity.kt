@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.quantinvestmentapplication.AccountFragment
 import com.example.quantinvestmentapplication.ChartFragment
 import com.example.quantinvestmentapplication.LogFragment
+import com.example.quantinvestmentapplication.MypageFragment
 import com.example.quantinvestmentapplication.R
 import com.example.quantinvestmentapplication.data.Candle
 import com.example.quantinvestmentapplication.config.BaseActivityVB
@@ -48,9 +49,17 @@ class MainActivity : BaseActivityVB<ActivityMainBinding>(ActivityMainBinding::in
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
+
                 R.id.logFragment -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, LogFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.mypageFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frm, MypageFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }

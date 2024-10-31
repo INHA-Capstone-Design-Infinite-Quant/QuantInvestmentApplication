@@ -81,7 +81,7 @@
                     android:layout_gravity="center"
                     android:layout_marginHorizontal="5dp"
                     android:gravity="center"
-                    android:text="App Key"
+                    android:text="ID"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -94,7 +94,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    app:counterMaxLength="12"
+                    app:counterMaxLength="100"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="@color/gray3">
 
@@ -110,15 +110,15 @@
                         app:counterMaxLength="12"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:passwordToggleEnabled="true"
                         app:passwordToggleTint="@color/gray3">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/login_selected_et"
+                            android:id="@+id/login_id_et"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:backgroundTint="@color/gray3"
-                            android:inputType="textPassword"
+                            android:inputType="text"
+                            app:counterEnabled="true"
                             android:maxLength="12"
                             android:paddingLeft="10dp"
                             android:textColor="@color/gray"
@@ -129,20 +129,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/login_app_key_error_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="-10dp"
-                android:paddingLeft="5dp"
-                android:text="API Key를 올바르게 입력해주세요"
-                android:textColor="@color/red"
-                android:textSize="14sp"
-                android:visibility="invisible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
@@ -163,7 +149,7 @@
                     android:layout_gravity="center"
                     android:layout_marginHorizontal="5dp"
                     android:gravity="center"
-                    android:text="App Secret"
+                    android:text="PW"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -175,10 +161,7 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    app:counterMaxLength="12"
-                    app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="@color/gray3">
+                    android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/app_secret_til"
@@ -190,18 +173,19 @@
                         android:theme="@style/EditTheme"
                         android:visibility="visible"
                         app:counterMaxLength="12"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="@color/gray3">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/login_app_secret_et"
+                            android:id="@+id/login_pw_et"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:backgroundTint="@color/gray3"
                             android:inputType="textPassword"
-                            android:maxLength="12"
                             android:paddingLeft="10dp"
                             android:textColor="@color/gray"
                             android:textSize="20sp" />
@@ -212,29 +196,28 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/login_password_error_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="5dp"
-                android:text="비밀번호는 6~12자 이내로 입력해주세요"
-                android:textColor="@color/red"
-                android:textSize="14sp"
-                android:visibility="invisible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
-
-
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_next_btn"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginHorizontal="22dp"
-                android:layout_marginBottom="35dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_selected_btn_radius8"
                 android:text="로그인"
                 android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/join_next_btn" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/join_next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/shape_btn_stroke_black"
+                android:text="회원 가입"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
